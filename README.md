@@ -4,7 +4,7 @@
 
 ## Installation
 
-Include the script [draw-derivation-trees.js](draw-derivation-trees.js) in your web page, after the [core.js](https://github.com/tau-prolog/tau-prolog/modules/core.js) script.
+Include the script [draw-derivation-trees.js](draw-derivation-trees.js) in your web page, after the [core.js](https://github.com/tau-prolog/tau-prolog) script.
 
 ```html
 <script type="text/javascript" src="tau-prolog/core.js"></script>

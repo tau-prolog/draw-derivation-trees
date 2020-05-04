@@ -103,13 +103,13 @@ var pl;
 			return;
 		// Get answer states
 		var answers = [];
-		var format_success = thread.session.format_success;
-		var format_error = thread.session.format_error;
-		var deb = thread.session.thread.debugger;
+		var format_success = thread.format_success;
+		var format_error = thread.format_error;
+		var deb = thread.debugger;
 		var id = function(x) { return x };
 		var after = function() {
-			thread.session.format_success = format_success;
-			thread.session.format_error = format_error;
+			thread.format_success = format_success;
+			thread.format_error = format_error;
 			thread.debugger = deb;
 			answers = thread.debugger_states;
 			// Set pointers to child nodes
@@ -134,10 +134,10 @@ var pl;
 			var levels = get_states_by_level( parent );
 			draw( levels, canvas, styles );
 		};
-		thread.session.format_success = id;
-		thread.session.format_error = id;
-		thread.session.thread.debugger = true;
-		thread.session.answers( function(x) { x.status = "answer"; }, max, after );
+		thread.format_success = id;
+		thread.format_error = id;
+		thread.debugger = true;
+		thread.answers( function(x) { x.status = "answer"; }, max, after );
 	};
 
 	var draw = function( tree, canvas_id, styles ) {

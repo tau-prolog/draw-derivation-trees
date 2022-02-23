@@ -137,7 +137,7 @@ var pl;
 		thread.format_success = id;
 		thread.format_error = id;
 		thread.debugger = true;
-		thread.answers( function(x) { x.status = "answer"; }, max, after );
+		thread.answers( function(x) { if(x) x.status = "answer"; }, max, after );
 	};
 
 	var draw = function( tree, canvas_id, styles ) {
